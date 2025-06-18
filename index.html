@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velký Gatsby - Literární web</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome pro ikony -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Navigace -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#home">
+            <i class="fas fa-book-open me-2"></i>Velký Gatsby
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Domov</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#story">Příběh</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#characters">Postavy</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#author">Autor</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#multimedia">Galerie</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#reflection">Reflexe</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Kontakt</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hlavní sekce -->
+<section id="home" class="hero-section">
+    <div class="container">
+        <div class="row align-items-center min-vh-100 pt-5">
+            <div class="col-lg-6">
+                <h1 class="display-3 fw-bold mb-4 fade-in">Velký Gatsby</h1>
+                <p class="lead mb-4 fade-in">Ponořte se do světa Jaye Gatsbyho a jeho nesmrtelné lásky k Daisy Buchananové. Objevte krásu a tragédii amerického snu ve zlatých dvacátých letech.</p>
+                <button class="btn btn-primary btn-lg me-3 fade-in" onclick="scrollToSection('story')">
+                    <i class="fas fa-book me-2"></i>Číst příběh
+                </button>
+                <button class="btn btn-outline-light btn-lg fade-in" onclick="scrollToSection('characters')">
+                    <i class="fas fa-users me-2"></i>Poznat postavy
+                </button>
+            </div>
+            <div class="col-lg-6 text-center">
+                <div class="book-image-container fade-in">
+                    <img src="img/book_cover.jpg"
+                         alt="Obal knihy Velký Gatsby"
+                         class="img-fluid rounded shadow-lg">
+                    <div class="image-credit mt-2">
+                        <small class="text-light">https://www.nejlevnejsi-knihy.cz/kniha/the-great-gatsby_33571716.html</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sekce Příběh -->
+<section id="story" class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2 class="display-4 mb-3">Příběh</h2>
+                <p class="lead">Román F. Scotta Fitzgeralda z roku 1925</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="card shadow-lg border-0 story-card">
+                    <div class="card-body p-5">
+                        <h3 class="card-title mb-4">Americký sen ve zlatých dvacátých</h3>
+                        <p class="card-text">
+                            Velký Gatsby se odehrává v létě roku 1922 na Long Islandu poblíž New Yorku.
+                            Vypravěčem je Nick Carraway, který se přistěhoval do sousedství záhadného milionáře Jaye Gatsbyho.
+                        </p>
+                        <p class="card-text">
+                            Gatsby pořádá pompézní večírky v naději, že přiláká svou ztracenou lásku Daisy Buchananovou,
+                            která je nyní vdaná za bohatého ale brutálního Toma Buchanana.
+                        </p>
+                        <div class="alert alert-warning" role="alert">
+                            <i class="fas fa-lightbulb me-2"></i>
+                            <strong>Zajímavost:</strong> Zelené světlo na konci Daisyina mola se stalo jedním z nejslavnějších symbolů v americké literatuře.
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <button class="btn btn-primary" onclick="toggleStoryDetails()">
+                                <i class="fas fa-plus me-2"></i>Více detailů
+                            </button>
+                            <a href="story.html" class="btn btn-success">
+                                <i class="fas fa-book-open me-2"></i>Číst příběh
+                            </a>
+                        </div>
+                        <div id="storyDetails" class="mt-4" style="display: none;">
+                            <h5>Hlavní témata:</h5>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Americký sen a jeho iluze</li>
+                                <li class="list-group-item">Společenské rozdílý</li>
+                                <li class="list-group-item">Láska a posedlost</li>
+                                <li class="list-group-item">Morální úpadek</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sekce Postavy -->
+<section id="characters" class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2 class="display-4 mb-3">Hlavní postavy</h2>
+                <p class="lead">Nezapomenutelné postavy, které formují příběh</p>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="card character-card h-100 shadow">
+                    <div class="card-body text-center">
+                        <div class="character-icon mb-3">
+                            <i class="fas fa-user-tie fa-3x text-primary"></i>
+                        </div>
+                        <h5 class="card-title">Jay Gatsby</h5>
+                        <p class="card-text">Záhadný milionář, který pořádá velkolepé večírky v naději, že znovu získá svou ztracenou lásku.</p>
+                        <button class="btn btn-outline-primary btn-sm" onclick="showCharacterDetails('gatsby')">
+                            Více info
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card character-card h-100 shadow">
+                    <div class="card-body text-center">
+                        <div class="character-icon mb-3">
+                            <i class="fas fa-female fa-3x text-warning"></i>
+                        </div>
+                        <h5 class="card-title">Daisy Buchanan</h5>
+                        <p class="card-text">Krásná a bohatá žena, která je objektem Gatsbyho lásky a obsese.</p>
+                        <button class="btn btn-outline-warning btn-sm" onclick="showCharacterDetails('daisy')">
+                            Více info
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card character-card h-100 shadow">
+                    <div class="card-body text-center">
+                        <div class="character-icon mb-3">
+                            <i class="fas fa-user-edit fa-3x text-success"></i>
+                        </div>
+                        <h5 class="card-title">Nick Carraway</h5>
+                        <p class="card-text">Vypravěč příběhu, Gatsbyho soused a Daisyin bratranec.</p>
+                        <button class="btn btn-outline-success btn-sm" onclick="showCharacterDetails('nick')">
+                            Více info
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card character-card h-100 shadow">
+                    <div class="card-body text-center">
+                        <div class="character-icon mb-3">
+                            <i class="fas fa-user fa-3x text-danger"></i>
+                        </div>
+                        <h5 class="card-title">Tom Buchanan</h5>
+                        <p class="card-text">Daisyin bohatý a arogantní manžel, který má mimomanželský vztah s Myrtle Wilson.</p>
+                        <button class="btn btn-outline-danger btn-sm" onclick="showCharacterDetails('tom')">
+                            Více info
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card character-card h-100 shadow">
+                    <div class="card-body text-center">
+                        <div class="character-icon mb-3">
+                            <i class="fas fa-user-alt fa-3x text-info"></i>
+                        </div>
+                        <h5 class="card-title">Myrtle Wilson</h5>
+                        <p class="card-text">Tomova milenka, která touží po lepším životě a tragicky končí pod koly auta.</p>
+                        <button class="btn btn-outline-info btn-sm" onclick="showCharacterDetails('myrtle')">
+                            Více info
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card character-card h-100 shadow">
+                    <div class="card-body text-center">
+                        <div class="character-icon mb-3">
+                            <i class="fas fa-user fa-3x text-secondary"></i>
+                        </div>
+                        <h5 class="card-title">George Wilson</h5>
+                        <p class="card-text">Myrtle Wilson manžel, mechanik, který se stane nástrojem pomsty za smrt své ženy.</p>
+                        <button class="btn btn-outline-secondary btn-sm" onclick="showCharacterDetails('george')">
+                            Více info
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card character-card h-100 shadow">
+                    <div class="card-body text-center">
+                        <div class="character-icon mb-3">
+                            <i class="fas fa-user-alt fa-3x text-success"></i>
+                        </div>
+                        <h5 class="card-title">Jordan Baker</h5>
+                        <p class="card-text">Profesionální golfistka, Daisyina přítelkyně a Nickova krátká známost.</p>
+                        <button class="btn btn-outline-success btn-sm" onclick="showCharacterDetails('jordan')">
+                            Více info
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card character-card h-100 shadow border-warning">
+                    <div class="card-body text-center">
+                        <div class="character-icon mb-3">
+                            <i class="fas fa-car fa-3x text-warning"></i>
+                        </div>
+                        <h5 class="card-title">Gatsbyho žluté auto</h5>
+                        <p class="card-text">Symbol bohatství a zkázy. Toto luxusní vozidlo se stává nástrojem tragédie.</p>
+                        <button class="btn btn-outline-warning btn-sm" onclick="showCharacterDetails('car')">
+                            Více info
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card character-card h-100 shadow">
+                    <div class="card-body text-center">
+                        <div class="character-icon mb-3">
+                            <i class="fas fa-user-tie fa-3x text-dark"></i>
+                        </div>
+                        <h5 class="card-title">Meyer Wolfsheim</h5>
+                        <p class="card-text">Gatsbyho obchodní partner, podezřelý gangster z podsvětí.</p>
+                        <button class="btn btn-outline-dark btn-sm" onclick="showCharacterDetails('wolfsheim')">
+                            Více info
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sekce Autor -->
+<section id="author" class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2 class="display-4 mb-3">O autorovi</h2>
+                <p class="lead">Francis Scott Fitzgerald</p>
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <div class="card shadow border-0">
+                    <div class="card-body p-5">
+                        <h3 class="card-title mb-4">Francis Scott Key Fitzgerald (1896-1940)</h3>
+                        <p class="card-text mb-3">
+                            F. Scott Fitzgerald byl americký spisovatel, jeden z nejvýznamnějších autorů 20. století
+                            a hlavní představitel "ztracené generace". Narodil se v Saint Paul v Minnesotě a studoval
+                            na Princetonské univerzitě, kterou však nedokončil.
+                        </p>
+                        <p class="card-text mb-3">
+                            Proslavil se především románem "Velký Gatsby" z roku 1925, který je dnes považován za
+                            jedno z nejdůležitějších děl americké literatury. Fitzgerald perfektně zachytil atmosféru
+                            "zlatých dvacátých let" a kriticky zobrazil americký sen.
+                        </p>
+                        <p class="card-text mb-3">
+                            Jeho život byl poznamenán alkoholismem a finančními problémy. Byl ženatý se Zeldou
+                            Sayre, která trpěla duševní nemocí. Fitzgerald zemřel ve věku 44 let na infarkt
+                            v Hollywoodu, kde pracoval jako scenárista.
+                        </p>
+                        <div class="mt-4">
+                            <h5>Hlavní díla:</h5>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Velký Gatsby (1925)</li>
+                                <li class="list-group-item">Něžná je noc (1934)</li>
+                                <li class="list-group-item">Na prahu ráje (1920)</li>
+                                <li class="list-group-item">Krásní a prokletí (1922)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center">
+                <div class="author-image-container">
+                    <img src="img/scott_fitzgerald.jpg"
+                         alt="F. Scott Fitzgerald"
+                         class="img-fluid rounded shadow-lg author-photo">
+                    <div class="image-credit mt-3">
+                        <small class="text-muted">
+                            https://cs.wikipedia.org/wiki/Francis_Scott_Fitzgerald#/<br>
+                            media/Soubor:F_Scott_Fitzgerald_1921.jpg
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sekce Multimediální galerie -->
+<section id="multimedia" class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2 class="display-4 mb-3">Multimediální galerie</h2>
+            </div>
+        </div>
+
+        <!-- Obrázková galerie -->
+        <div class="row mb-5">
+            <div class="col-12 mb-4">
+                <h3 class="text-center">Atmosféra dvacátých let</h3>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card shadow">
+                    <img src="img/gallery/elegance.jpg"
+                         class="card-img-top" alt="Elegance dvacátých let">
+                    <div class="card-body">
+                        <h6 class="card-title">Elegance dvacátých let</h6>
+                        <small class="text-muted">
+                            https://vivomasks.com/pages/<br>
+                            how-to-throw-an-incredible-great-gatsby-theme-party
+                        </small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card shadow">
+                    <img src="img/gallery/reading.jpg"
+                         class="card-img-top" alt="Jazz 20. století">
+                    <div class="card-body">
+                        <h6 class="card-title">Jazz 20. století</h6>
+                        <small class="text-muted">
+                            https://en.wikipedia.org/wiki/Jazz_Age#/media/File:CarterAndKingJazzingOrchestra.jpg
+                        </small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card shadow">
+                    <img src="img/gallery/modern.jpg"
+                         class="card-img-top" alt="Moderní interpretace">
+                    <div class="card-body">
+                        <h6 class="card-title">Moderní interpretace</h6>
+                        <small class="text-muted">
+                            https://www.hollywoodreporter.com/movies/<br>
+                            movie-news/box-office-report-great-gatsby-520939/
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Video obsah -->
+        <div class="row">
+            <div class="col-12 mb-4">
+                <h3 class="text-center">Filmové adaptace</h3>
+            </div>
+            <div class="col-lg-8 mx-auto">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Trailer Velkého Gatsbyho (2013)</h5>
+                        <div class="ratio ratio-16x9 mb-3">
+                            <iframe src="https://www.youtube.com/embed/rARN6agiW7o"
+                                    title="The Great Gatsby Official Trailer"
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                        <p class="text-center">
+                            <small class="text-muted">
+                                Oficiální trailer k filmu s Leonardo DiCaprio (2013)<br>
+                                Zdroj: <a href="https://www.youtube.com/watch?v=rARN6agiW7o" target="_blank">Warner Bros. Pictures</a>
+                            </small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sekce Reflexe -->
+<section id="reflection" class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2 class="display-4 mb-3">Osobní reflexe</h2>
+                <p class="lead">Moje myšlenky o tomto mistrovském díle</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="card shadow border-0">
+                    <div class="card-body p-5">
+                        <blockquote class="blockquote text-center mb-4">
+                            <p class="mb-0">"A tak plujeme dál, lodice proti proudu, neustále vraceni do minulosti."</p>
+                            <footer class="blockquote-footer mt-2">F. Scott Fitzgerald</footer>
+                        </blockquote>
+
+                        <h4 class="mb-3">Proč je Velký Gatsby nadčasový?</h4>
+                        <p>
+                            Tato kniha mě fascinuje svým pohledem na americký sen. Gatsby představuje naši touhu
+                            po přeměně, po novém začátku, ale také naše sebeklamání.
+                        </p>
+                        <p>
+                            Fitzgerald mistrovsky zachytil zlaté dvacáté roky, ale témata knihy - láska,
+                            třídní rozdíly, iluze bohatství - jsou stále aktuální.
+                        </p>
+
+                        <div class="mt-4">
+                            <h5>Zanechte svou reflexi:</h5>
+                            <form id="reflectionForm" class="mt-3">
+                                <div class="mb-3">
+                                    <label for="userName" class="form-label">Vaše jméno:</label>
+                                    <input type="text" class="form-control" id="userName" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="userReflection" class="form-label">Vaše myšlenky o knize:</label>
+                                    <textarea class="form-control" id="userReflection" rows="4" required></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="rating" class="form-label">Hodnocení (1-5 hvězd):</label>
+                                    <select class="form-select" id="rating" required>
+                                        <option value="">Vyberte hodnocení</option>
+                                        <option value="1">⭐ (1)</option>
+                                        <option value="2">⭐⭐ (2)</option>
+                                        <option value="3">⭐⭐⭐ (3)</option>
+                                        <option value="4">⭐⭐⭐⭐ (4)</option>
+                                        <option value="5">⭐⭐⭐⭐⭐ (5)</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-paper-plane me-2"></i>Odeslat reflexi
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sekce Kontakt -->
+<section id="contact" class="py-5 bg-dark text-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2 class="display-4 mb-3">Kontakt</h2>
+                <p class="lead">Máte otázky nebo chcete diskutovat o knize?</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 mx-auto">
+                <form id="contactForm">
+                    <div class="mb-3">
+                        <label for="contactName" class="form-label">Jméno:</label>
+                        <input type="text" class="form-control" id="contactName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="contactEmail" class="form-label">E-mail:</label>
+                        <input type="email" class="form-control" id="contactEmail" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="contactMessage" class="form-label">Zpráva:</label>
+                        <textarea class="form-control" id="contactMessage" rows="5" required></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            <i class="fas fa-envelope me-2"></i>Odeslat zprávu
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center text-white">
+                <p>&copy; 2024 Velký Gatsby - Literární web. Vytvořeno s láskou k literatuře.</p>
+                <div class="mt-3">
+                    <small>
+                        <a href="404.html" class="text-warning me-3">Test 404 stránky</a>
+                        <a href="500.html" class="text-warning">Test 500 stránky</a>
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Modal pro detaily postav -->
+<div class="modal fade" id="characterModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="characterModalTitle">Detail postavy</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body" id="characterModalBody">
+                <!-- Obsah se načte dynamicky -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zavřít</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
