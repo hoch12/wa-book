@@ -246,13 +246,27 @@ function showCharacterDetails(characterId) {
     }
 }
 
+function updateStars(value) {
+    const ratingValue = document.getElementById('ratingValue');
+    const starDisplay = document.getElementById('starDisplay');
+
+    ratingValue.textContent = value;
+
+    let stars = '';
+    for (let i = 0; i < value; i++) {
+        stars += '⭐';
+    }
+    starDisplay.textContent = stars;
+}
+
+
 // Odeslání formuláře s reflexí
 document.getElementById('reflectionForm').addEventListener('submit', function(e) {
     e.preventDefault();
 
     const name = document.getElementById('userName').value;
     const reflection = document.getElementById('userReflection').value;
-    const rating = document.getElementById('rating').value;
+    const rating = document.getElementById('ratingRange').value;
 
     // Zobrazení zprávy uživateli
     alert('Děkujeme, ' + name + '! Vaše reflexe byla odeslána.\nHodnocení: ' + rating + ' hvězd');
@@ -260,7 +274,9 @@ document.getElementById('reflectionForm').addEventListener('submit', function(e)
     // Vymazání formuláře
     document.getElementById('userName').value = '';
     document.getElementById('userReflection').value = '';
-    document.getElementById('rating').value = '5';
+    document.getElementById('ratingRange').value = '3';
+    updateStars(3);
+
 });
 
 // Odeslání kontaktního formuláře

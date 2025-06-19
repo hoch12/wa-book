@@ -33,6 +33,10 @@
                     <a class="nav-link" href="#story">Příběh</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link text-decoration-underline" href="film.html">
+                        </i>Srovnání</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="#characters">Postavy</a>
                 </li>
                 <li class="nav-item">
@@ -434,16 +438,15 @@
                                     <textarea class="form-control" id="userReflection" rows="4" required></textarea>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="rating" class="form-label">Hodnocení (1-5 hvězd):</label>
-                                    <select class="form-select" id="rating" required>
-                                        <option value="">Vyberte hodnocení</option>
-                                        <option value="1">⭐ (1)</option>
-                                        <option value="2">⭐⭐ (2)</option>
-                                        <option value="3">⭐⭐⭐ (3)</option>
-                                        <option value="4">⭐⭐⭐⭐ (4)</option>
-                                        <option value="5">⭐⭐⭐⭐⭐ (5)</option>
-                                    </select>
+                                    <label for="ratingRange" class="form-label">Hodnocení (1-5 hvězd):</label>
+                                    <input type="range" class="form-range" min="1" max="5" step="1" id="ratingRange" value="3" oninput="updateStars(this.value)">
+                                    <div>
+                                        <span id="ratingValue">3</span> hvězdy:
+                                        <span id="starDisplay">⭐⭐⭐</span>
+                                    </div>
                                 </div>
+
+
                                 <button type="submit" class="btn btn-primary">
                                     <i class="fas fa-paper-plane me-2"></i>Odeslat reflexi
                                 </button>
