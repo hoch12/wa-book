@@ -59,12 +59,17 @@
             <div class="col-lg-6">
                 <h1 class="display-3 fw-bold mb-4 fade-in">Velký Gatsby</h1>
                 <p class="lead mb-4 fade-in">Ponořte se do světa Jaye Gatsbyho a jeho nesmrtelné lásky k Daisy Buchananové. Objevte krásu a tragédii amerického snu ve zlatých dvacátých letech.</p>
-                <button class="btn btn-primary btn-lg me-3 fade-in" onclick="scrollToSection('story')">
-                    <i class="fas fa-book me-2"></i>Číst příběh
-                </button>
-                <button class="btn btn-outline-light btn-lg fade-in" onclick="scrollToSection('characters')">
-                    <i class="fas fa-users me-2"></i>Poznat postavy
-                </button>
+                <div class="d-flex flex-wrap gap-3 fade-in">
+                    <button class="btn btn-primary btn-lg" onclick="scrollToSection('story')">
+                        <i class="fas fa-book me-2"></i>Číst příběh
+                    </button>
+                    <button class="btn btn-outline-light btn-lg" onclick="scrollToSection('characters')">
+                        <i class="fas fa-users me-2"></i>Poznat postavy
+                    </button>
+                    <a href="film.html" class="btn btn-outline-warning btn-lg">
+                        <i class="fas fa-film me-2"></i>Srovnání s filmem
+                    </a>
+                </div>
             </div>
             <div class="col-lg-6 text-center">
                 <div class="book-image-container fade-in">
@@ -382,28 +387,7 @@
             </div>
         </div>
 
-        <!-- Video obsah -->
-        <div class="row">
-            <div class="col-12 mb-4">
-                <h3 class="text-center">Filmové adaptace</h3>
-            </div>
-            <div class="col-lg-8 mx-auto">
-                <div class="card shadow">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">Trailer Velkého Gatsbyho (2013)</h5>
-                        <div class="ratio ratio-16x9 mb-3">
-                            <iframe src="https://www.youtube.com/embed/rARN6agiW7o"
-                                    title="The Great Gatsby Official Trailer"
-                                    allowfullscreen>
-                            </iframe>
-                        </div>
-                        <p class="text-center">
-                            <small class="text-muted">
-                                Oficiální trailer k filmu s Leonardo DiCaprio (2013)<br>
-                                Zdroj: <a href="https://www.youtube.com/watch?v=rARN6agiW7o" target="_blank">Warner Bros. Pictures</a>
-                            </small>
-                        </p>
-                    </div>
+
                 </div>
             </div>
         </div>

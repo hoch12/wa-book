@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Srovnání s filmem - Velký Gatsby</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome pro ikony -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Navigace -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <i class="fas fa-book-open me-2"></i>Velký Gatsby
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Domov</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="story.html">Příběh</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="film.html">Srovnání s filmem</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hlavní obsah -->
+<main class="pt-5 mt-5">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="text-center mb-5">
+                    <h1 class="display-3 mb-3">Srovnání knihy a filmu</h1>
+                    <p class="lead text-muted">Jak si filmová adaptace poradila s klasickým románem</p>
+                    <hr class="my-4">
+                </div>
+
+                <div class="story-content">
+                    <div class="card shadow-lg border-0 mb-4">
+                        <div class="card-body p-5">
+                            <h2 class="h3 mb-4">Vizuální styl a atmosféra</h2>
+                            <p class="lead">
+                                Filmová adaptace z roku 2013 v režii Baze Luhrmanna je známá svým extravagantním vizuálním stylem.
+                            </p>
+                            <p>
+                                Na rozdíl od subtilního jazyka knihy používá film moderní hudbu, rychlé střihy a barevně nasycené scény,
+                                aby divákovi přiblížil pocit přepychu dvacátých let. To sice některé diváky vtáhne, ale může odvádět pozornost od hlubších témat.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card shadow-lg border-0 mb-4">
+                        <div class="card-body p-5">
+                            <h2 class="h3 mb-4">Postavy a herecké výkony</h2>
+                            <p>
+                                Leonardo DiCaprio ztvárnil Gatsbyho jako charismatického, ale zranitelného muže.
+                                Jeho výkon dodává postavě další vrstvu emocí, kterou si čtenář mohl v knize pouze domýšlet.
+                            </p>
+                            <p>
+                                Tobey Maguire jako Nick Carraway je spíše pasivním pozorovatelem, což odpovídá knižní předloze, ale někteří diváci ho vnímali jako nedostatečně výrazného.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card shadow-lg border-0 mb-4">
+                        <div class="card-body p-5">
+                            <h2 class="h3 mb-4">Věrnost ději</h2>
+                            <p>
+                                Film se drží hlavní dějové linie knihy, ale některé scény jsou zkrácené nebo upravené kvůli tempu filmu.
+                                Například vnitřní monology Nicka jsou nahrazeny vyprávěním formou psaní vzpomínek v léčebně.
+                            </p>
+                            <p>
+                                Některé detaily byly vypuštěny nebo zjednodušeny, aby byl film srozumitelný širšímu publiku.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card shadow-lg border-0 mb-4">
+                        <div class="card-body p-5 text-center">
+                            <h2 class="h3 mb-4">Trailer k filmu</h2>
+                            <div class="ratio ratio-16x9">
+                                <iframe src="https://www.youtube.com/embed/rARN6agiW7o" title="Trailer k filmu Velký Gatsby" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card shadow-lg border-0 bg-light">
+                        <div class="card-body p-5 text-center">
+                            <h2 class="h3 mb-4">Závěrečné shrnutí</h2>
+                            <p class="lead">
+                                Kniha nabízí hlubší pohled do psychologie postav a motivů amerického snu,
+                                zatímco film klade důraz na estetiku a emoce. Oba formáty mají svou sílu –
+                                kniha v introspekci, film v atmosféře.
+                            </p>
+                            <blockquote class="blockquote mt-4">
+                                <p>"Kdyby Gatsby věřil méně v krásu minulosti, možná by měl šanci na budoucnost."</p>
+                                <footer class="blockquote-footer">Neoficiální interpretace</footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-5">
+                    <a href="index.html" class="btn btn-primary btn-lg">
+                        <i class="fas fa-arrow-left me-2"></i>Zpět na hlavní stránku
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-dark py-4 mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center text-white">
+                <p>&copy; 2024 Velký Gatsby - Literární web. Vytvořeno s láskou k literatuře.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
