@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kvíz – Kdo jsi z Gatsbyho?</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .character-detail img {
+            max-width: 300px;
+            height: 400px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+<!-- Navigace -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <i class="fas fa-book-open me-2"></i>Velký Gatsby
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Domov</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="kviz.html">Kvíz</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="pt-5 mt-5">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="text-center mb-5">
+                    <h1 class="display-3 mb-3">Kdo jsi z Gatsbyho?</h1>
+                    <p class="lead text-muted">Vyplň náš kvíz a zjisti, která postava z Velkého Gatsbyho ti je nejblíže.</p>
+                    <hr class="my-4">
+                </div>
+
+                <form id="quizForm">
+                    <div class="card shadow-lg border-0 mb-4">
+                        <div class="card-body p-4">
+                            <h4 class="mb-3">1. Co je pro tebe nejdůležitější?</h4>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q1" value="gatsby" required><label class="form-check-label">Láska</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q1" value="daisy"><label class="form-check-label">Pohodlí a obdiv</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q1" value="nick"><label class="form-check-label">Porozumění druhým</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q1" value="wolfsheim"><label class="form-check-label">Moc a vliv</label></div>
+                        </div>
+                    </div>
+
+                    <div class="card shadow-lg border-0 mb-4">
+                        <div class="card-body p-4">
+                            <h4 class="mb-3">2. Jak trávíš sobotní večer?</h4>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q2" value="gatsby" required><label class="form-check-label">Na večírku, který sám pořádám</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q2" value="jordan"><label class="form-check-label">Na golfovém turnaji nebo s přáteli</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q2" value="auto"><label class="form-check-label">Na projížďce v luxusním voze</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q2" value="tom"><label class="form-check-label">V baru, kde si můžu připomenout, že mám navrch</label></div>
+                        </div>
+                    </div>
+
+                    <div class="card shadow-lg border-0 mb-4">
+                        <div class="card-body p-4">
+                            <h4 class="mb-3">3. Která fráze tě nejlépe vystihuje?</h4>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q3" value="george" required><label class="form-check-label">„Chci jen klidný život a pravdu.“</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q3" value="myrtle"><label class="form-check-label">„Chci být víc než jsem.“</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q3" value="nick"><label class="form-check-label">„Pozoruji a chápu.“</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q3" value="gatsby"><label class="form-check-label">„Všechno dělám pro lásku.“</label></div>
+                        </div>
+                    </div>
+
+                    <div class="card shadow-lg border-0 mb-4">
+                        <div class="card-body p-4">
+                            <h4 class="mb-3">4. Jak se stavíš ke své minulosti?</h4>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q4" value="gatsby" required><label class="form-check-label">Snažím se ji přepsat a začít znovu</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q4" value="nick"><label class="form-check-label">Učím se z ní a nechávám ji být</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q4" value="daisy"><label class="form-check-label">Ignoruji ji, pokud mi není příjemná</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q4" value="tom"><label class="form-check-label">Minulost mě formovala a dává mi právo vést</label></div>
+                        </div>
+                    </div>
+
+                    <div class="card shadow-lg border-0 mb-4">
+                        <div class="card-body p-4">
+                            <h4 class="mb-3">5. Co podle tebe dělá člověka úspěšným?</h4>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q5" value="wolfsheim" required><label class="form-check-label">Schopnost využít příležitosti za každou cenu</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q5" value="jordan"><label class="form-check-label">Sebedůvěra a chladná hlava</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q5" value="myrtle"><label class="form-check-label">Vystoupat po společenském žebříčku</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q5" value="george"><label class="form-check-label">Pracovitost a poctivost</label></div>
+                        </div>
+                    </div>
+
+                    <div class="card shadow-lg border-0 mb-4">
+                        <div class="card-body p-4">
+                            <h4 class="mb-3">6. Co tě nejvíce motivuje?</h4>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q6" value="gatsby" required><label class="form-check-label">Vidina ideální budoucnosti</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q6" value="tom"><label class="form-check-label">Touha mít kontrolu</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q6" value="daisy"><label class="form-check-label">Pohodlí a bezpečí</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q6" value="nick"><label class="form-check-label">Hledání pravdy a rovnováhy</label></div>
+                        </div>
+                    </div>
+
+                    <div class="card shadow-lg border-0 mb-4">
+                        <div class="card-body p-4">
+                            <h4 class="mb-3">7. Jak by tě popsali ostatní lidé?</h4>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q7" value="jordan" required><label class="form-check-label">Sebevědomý a nedostupný</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q7" value="gatsby"><label class="form-check-label">Tajemný a inspirující</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q7" value="george"><label class="form-check-label">Tichý, ale silný</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q7" value="auto"><label class="form-check-label">Výrazný a nebezpečný</label></div>
+                        </div>
+                    </div>
+
+                    <div class="card shadow-lg border-0 mb-4">
+                        <div class="card-body p-4">
+                            <h4 class="mb-3">8. Jaký máš vztah k pravdě?</h4>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q8" value="nick" required><label class="form-check-label">Hledám ji, i když bolí</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q8" value="jordan"><label class="form-check-label">Ohýbám ji, pokud mi to pomůže</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q8" value="tom"><label class="form-check-label">Používám ji, když mi slouží</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q8" value="gatsby"><label class="form-check-label">Věřím v pravdu, kterou si tvořím sám</label></div>
+                        </div>
+                    </div>
+
+
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-success btn-lg me-3">Vyhodnotit</button>
+                        <button type="button" class="btn btn-outline-secondary btn-lg" onclick="resetQuiz()">Zkusit znovu</button>
+                    </div>
+                </form>
+
+                <div id="result" class="mt-5"></div>
+
+                <div class="text-center mt-5">
+                    <a href="index.html" class="btn btn-primary btn-lg">
+                        <i class="fas fa-arrow-left me-2"></i>Zpět na hlavní stránku
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="bg-dark py-4 mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center text-white">
+                <p>&copy; 2024 Velký Gatsby - Literární web. Vytvořeno s láskou k literatuře.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="characters.js"></script>
+<script src="kviz.js"></script>
+</body>
+</html>

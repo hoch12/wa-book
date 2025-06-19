@@ -1,5 +1,3 @@
-/* CSS styly pro Velký Gatsby web */
-
 :root {
     --primary-color: #1a1a1a;
     --secondary-color: #f8f9fa;
@@ -168,10 +166,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .book-image-container img {
-    transform: scale(1); /* Výchozí velikost */
-    transition: transform 0.3s ease-in-out; /* Plynulý přechod pro zvětšení i zmenšení */
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
 }
 
 .book-image-container:hover img {
-    transform: scale(1.05); /* Zvětšení obrázku při hoveru */
+    transform: scale(1.05);
 }
